@@ -1,0 +1,18 @@
+SUBJECT: Brevity 
+AUTHOR:  sglitowitz
+LICENSE: GPL v2 (http://choosealicense.com/licenses/gpl-v2/) 
+SUMMARY: A simple web-site page handler. 
+
+USAGE:   Install by copying all files your web documents directory.
+
+To add a page to your website, create a file <action>.page.php in the ./pages directory. 
+  The name of your page will be used as part of the link, for example. A link to 
+  sample.page.php would be index.php?action=sample. 
+
+You can then append extra arguments to pass as necessary. The sample page provided is a 
+  barebones example that can be modified however is necessary to meet your needs.  To
+  access extra arguments use $this->uGet['variable_name']. For example a path is
+  index.php?action=sample&uid=124. To access the user identification inside your page
+  class, use $this->uGet['uid']. With the exception of the 'action' variable, no
+  arguments are filtered in any way and it is recommended you take steps to prevent
+  code or SQL injection by filtering!!! 
